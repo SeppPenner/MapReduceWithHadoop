@@ -1,0 +1,13 @@
+export JAVA_HOME=/usr/java/default
+export PATH=$JAVA_HOME/bin:$PATH
+export HADOOP_CLASSPATH=$JAVA_HOME/lib/tools.jar
+/usr/bin/hadoop com.sun.tools.javac.Main MoviesWordCount.java
+jar cf mwc.jar MoviesWordCount*.class
+hadoop fs -mkdir /user/student_69
+hadoop fs -mkdir InputMoviesWordCount
+hadoop fs -copyFromLocal /home/student_69/MoviesWordCount/movies.list InputMoviesWordCount/movies.list
+hdfs dfs -ls /user/student_69/InputMoviesWordCount/
+hadoop jar mwc.jar MoviesWordCount /user/student_69/InputMoviesWordCount/ /user/student_69/output
+hadoop fs -get /user/student_69/output /home/student_69/MoviesWordCount/
+hdfs dfs -ls /user/student_69/output
+hdfs dfs -cat /user/student_69/output/part-r-00000
