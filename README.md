@@ -3,7 +3,7 @@ MapReduce
 
 MapReduce implementation for a word count with Apache Hadoop.
 
-##First step:
+## First step:
 Download/ create the file you want to search. In our case as example I used: https://www.dropbox.com/s/6yg2xtg10uri3qx/movies.list?dl=0
 
 ## Basic usage:
