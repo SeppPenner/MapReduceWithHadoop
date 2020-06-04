@@ -32,4 +32,4 @@ hdfs dfs -cat /user/YourFolder/output/part-r-00000
 Change history
 --------------
 
-* **Version 1.0.0.0 (2017-04-22)** : 1.0 release.
+See the [Changelog](https://github.com/SeppPenner/MapReduceWithHadoop/blob/master/Changelog.md).
